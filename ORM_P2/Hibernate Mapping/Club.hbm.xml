@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+	namespace="ORM_P2" assembly="ORM_P2">
+  <class name ="Club">
+    <id name ="ClubId">
+      <generator class="increment"/>
+    </id>
+    <property name="Name" length ="30" not-null="true"/>
+    <property name="City" length ="30" not-null="true"/>
+    <property name="Country" length ="50" not-null="true"/>
+    <bag name="FigureSkaters" lazy="false" inverse="true" cascade="all-delete-orphan">
+      <key column="ClubId"/>
+      <one-to-many class="FigureSkater"/>
+    </bag>
+  </class>
+</hibernate-mapping>
