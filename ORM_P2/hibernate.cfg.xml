@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+    <session-factory>
+      <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+      <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
+      <property name="query.substitutions">hqlFunction=SQLFUNC</property>
+      <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+      <property name="connection.connection_string">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\user\Documents\СУБД 2.0\Лабораторная работа №1 ORM\ORM_P2\ORM_P2\ClubsFS.mdf";Initial Catalog=ClubsFS;Integrated Security=True</property>
+      <property name="show_sql">true</property>
+    </session-factory>
+  </hibernate-configuration>
